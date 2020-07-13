@@ -90,7 +90,7 @@ export class HomePage {
       const mapEle: HTMLElement = document.getElementById('map');
       // create LatLng object
       const myLatLng = {lat: this.lat , lng: this.long};
-      // create map
+      // create map de nuevo
       this.map = new google.maps.Map(mapEle, {
         center: myLatLng,
         zoom: 16
