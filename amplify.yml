@@ -6,9 +6,9 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run-script build
+        - npm run build
   artifacts:
-    baseDirectory: platforms/www
+    baseDirectory: www
     files:
       - '**/*'
   cache:
