@@ -1,20 +1,61 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+    <ion-card-title>
+        <h4 class="title-center">{{ service }}</h4>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    </ion-card-title>
+    <div class="map" id="map"></div>
+    <ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        <ion-card-header>
+
+            <ion-row>
+                <ion-col size="4" class="content-user">
+                    <div>
+                        <img src="{{foto}}" class="img-user" *ngIf="foto != null && foto != null">
+                        <ion-icon class="user-img" name="person-circle-outline" *ngIf="foto == null">
+
+                        </ion-icon>
+                        <hr>
+                        <h1 *ngIf="colaborador != null && colaborador != null">{{colaborador}}</h1>
+                    </div>
+                </ion-col>
+                <ion-col size="8" class="content-status">
+                    <ion-item lines="none" class="custom-checkbox">
+                        <ion-checkbox [(ngModel)]="status.buscando" disabled name="buscando" slot="start" class="check-customer"></ion-checkbox>
+                        <ion-label>Buscando</ion-label>
+                    </ion-item>
+                    <ion-item class="item-check" lines="none">
+                        <ion-checkbox [(ngModel)]="status.encontrado" name="encontrado" slot="start" disabled class="check-customer"></ion-checkbox>
+                        <ion-label>Encontrado</ion-label>
+                    </ion-item>
+                    <ion-item class="item-check" lines="none">
+                        <ion-checkbox [(ngModel)]="status.encamino" name="encamino" slot="start" disabled class="check-customer"></ion-checkbox>
+                        <ion-label>En camino</ion-label>
+                    </ion-item>
+                    <ion-item class="item-check" lines="none">
+                        <ion-checkbox [(ngModel)]="status.enservicio" name="enservicio" slot="start" disabled class="check-customer"></ion-checkbox>
+                        <ion-label>En servicio</ion-label>
+                    </ion-item>
+                    <ion-item class="item-check" lines="none">
+                        <ion-checkbox [(ngModel)]="status.terminado" name="terminado" slot="start" disabled class="check-customer"></ion-checkbox>
+                        <ion-label>Finalizado</ion-label>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-card-header>
+
+        <ion-card-content>
+
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-footer class="myColor">
+        Powered By: Asiste
+
+
+    </ion-footer>
+
 </ion-content>

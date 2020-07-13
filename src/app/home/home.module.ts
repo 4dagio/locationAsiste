@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+declare var google;
+
 
 @NgModule({
   imports: [
