@@ -7,12 +7,11 @@ frontend:
     build:
       commands:
         - npm install 
-        - npm install -g @ionic/cli
-        - npm install -g cordova
-        - ionic cordova build browser --prod
+        - npm run build
+        # - ionic cordova build browser --prod
         
   artifacts:
-    baseDirectory: platforms/browser/www
+    baseDirectory: www
     files:
       - '**/*'
   cache:
