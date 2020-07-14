@@ -9,7 +9,7 @@ frontend:
         - npm run build
         
   artifacts:
-    baseDirectory: platforms/browser/www
+    baseDirectory: /platforms/browser/www
     files:
       - '**/*'
   cache:
