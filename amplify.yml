@@ -6,9 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm install 
-        - npm install -g @ionic/cli
-        - ionic cordova build browser --prod
+        - npm run build 
         
   artifacts:
     baseDirectory: www
