@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm build --prod
+        - npm run build --prod
   artifacts:
     baseDirectory: dist/asisteMapp
     files:
