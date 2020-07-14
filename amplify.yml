@@ -6,9 +6,8 @@ frontend:
         - npm ci
     build:
       commands:
-        - ionic cordova platform add browser
-        - ionic cordova build browser --prod --release
-
+        - npm run build:prod
+        
   artifacts:
     baseDirectory: platforms/browser/www
     files:
